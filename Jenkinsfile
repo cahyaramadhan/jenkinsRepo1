@@ -1,9 +1,9 @@
 // properties([pipelineTriggers([githubPush()])])
 
 pipeline {
-//     triggers {
-//         pollSCM('') //Empty quotes tells it to build on a push
-//     }
+    triggers {
+        pollSCM('') //Empty quotes tells it to build on a push
+    }
     agent any
     
     stages {
