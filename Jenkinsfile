@@ -1,6 +1,9 @@
-properties([pipelineTriggers([githubPush()])])
+// properties([pipelineTriggers([githubPush()])])
 
-node {
+pipeline {
+    triggers {
+        pollSCM('') //Empty quotes tells it to build on a push
+    }
     stage ('Checkout'){
         git branch: 'main', url: 'https://github.com/cahyaramadhan/jenkinsRepo1.git'
     }
